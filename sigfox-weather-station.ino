@@ -17,6 +17,7 @@ struct data {
 
 
 void setup() {
+  Wire.begin();
   // Init UART devices
   if (DEBUG) {
     SerialUSB.begin(115200);
