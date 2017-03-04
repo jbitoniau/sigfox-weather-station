@@ -33,7 +33,7 @@ void setup() {
 void loop() {
   data frame;
   frame.humidity = smeHumidity.readHumidity();  
-  frame.temperature = (smeHumidity.readTemperature() + smePressure.readTemperature())/2.0;
+  frame.temperature = smeHumidity.readTemperature();
   frame.pressure = smePressure.readPressure();
 
   if (DEBUG) {    
