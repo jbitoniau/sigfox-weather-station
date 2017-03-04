@@ -36,8 +36,8 @@ void loop() {
   frame.temperature = (smeHumidity.readTemperature() + smePressure.readTemperature())/2.0;
   frame.pressure = smePressure.readPressure();
 
-  if (DEBUG) {
-    SerialUSB.print("Temp ");
+  if (DEBUG) {    
+    SerialUSB.print("Temp ");                 // Printing on SerialUSB doesn't seem to work for the first loop() call
     SerialUSB.println(frame.temperature, 6);
     SerialUSB.print("\tHumidity ");
     SerialUSB.println(frame.humidity);
